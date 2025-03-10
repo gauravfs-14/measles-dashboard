@@ -1,0 +1,50 @@
+[
+    {
+        "county": "Dallam, TX",
+        "cases": 5
+    },
+    {
+        "county": "Dawson, TX",
+        "cases": 9
+    },
+    {
+        "county": "Ector, TX",
+        "cases": 2
+    },
+    {
+        "county": "Gaines, TX",
+        "cases": 137
+    },
+    {
+        "county": "Harris, TX",
+        "cases": 2
+    },
+    {
+        "county": "Lubbock, TX",
+        "cases": 3
+    },
+    {
+        "county": "Lynn, TX",
+        "cases": 2
+    },
+    {
+        "county": "Martin, TX",
+        "cases": 3
+    },
+    {
+        "county": "Rockwall, TX",
+        "cases": 1
+    },
+    {
+        "county": "Terry, TX",
+        "cases": 29
+    },
+    {
+        "county": "Travis, TX",
+        "cases": 1
+    },
+    {
+        "county": "Yoakum, TX",
+        "cases": 8
+    }
+]
