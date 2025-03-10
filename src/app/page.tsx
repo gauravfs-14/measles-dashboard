@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <FilterProvider>
       <header className="w-full flex justify-center items-center p-4 mb-6 bg-green-800 text-white">
-        <h1 className="text-2xl font-bold">Texas Measles Dashboard</h1>
+        <h1 className="text-2xl font-bold">Texas Measles Dashboard (2025)</h1>
       </header>
 
       <main className="max-w-5xl mx-auto">
