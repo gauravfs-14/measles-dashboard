@@ -2,7 +2,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCasesData } from "@/hooks/useCasesData";
-import { useFilterContext } from "@/context/filter-context";
 import {
   BarChart,
   Bar,

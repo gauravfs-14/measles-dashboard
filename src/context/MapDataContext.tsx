@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 import React, {
   createContext,
@@ -54,16 +56,6 @@ export const MapDataProvider: React.FC<{ children: ReactNode }> = ({
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<MapFilters>({});
 
-  // Process and create a map of county names to case counts for faster lookups
-  const casesCountyMap = React.useMemo(() => {
-    const map = new Map<string, number>();
-    casesData.forEach((item) => {
-      const countyName = item.county.split(",")[0];
-      map.set(countyName, item.cases);
-    });
-    return map;
-  }, []);
-
   // Load GeoJSON data
   useEffect(() => {
     const fetchGeoData = async () => {
@@ -119,7 +111,7 @@ export const MapDataProvider: React.FC<{ children: ReactNode }> = ({
     }
 
     setFilteredMmrData(filtered);
-  }, [filters, mmrData]);
+  }, [filters]);
 
   // Process cases data
   useEffect(() => {
@@ -150,7 +142,7 @@ export const MapDataProvider: React.FC<{ children: ReactNode }> = ({
     // Update the list of visible counties based on cases
     const countySet = new Set(filtered.map((item) => item.county));
     setVisibleCounties(Array.from(countySet));
-  }, [filters, casesData]);
+  }, [filters]);
 
   // Update filter values
   const updateFilter = (key: keyof MapFilters, value: any) => {

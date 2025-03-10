@@ -42,7 +42,7 @@ const ExemptionRatesPanel: React.FC = () => {
     }));
 
     // Sort by rate or alphabetically
-    let sortedData = [...mappedData];
+    const sortedData = [...mappedData];
     if (sortBy === "rate") {
       sortedData.sort((a, b) => (b.rate || 0) - (a.rate || 0));
     } else {
@@ -107,7 +107,9 @@ const ExemptionRatesPanel: React.FC = () => {
             <Label htmlFor="sort">Sort By</Label>
             <Select
               value={sortBy}
-              onValueChange={(value) => setSortBy(value as any)}
+              onValueChange={(value: "alphabetical" | "rate") =>
+                setSortBy(value)
+              }
             >
               <SelectTrigger id="sort">
                 <SelectValue placeholder="Sort By" />

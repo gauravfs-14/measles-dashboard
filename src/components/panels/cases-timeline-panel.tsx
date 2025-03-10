@@ -28,7 +28,12 @@ const COLORS = [
 
 const CasesTimelinePanel: React.FC = () => {
   const { casesTimeline, loading, error } = useCasesData();
-  const [chartData, setChartData] = useState<any[]>([]);
+  interface DataPoint {
+    date: string;
+    [countyName: string]: string | number;
+  }
+
+  const [chartData, setChartData] = useState<DataPoint[]>([]);
 
   // Combine all county data into a single timeline
   useEffect(() => {
@@ -47,7 +52,7 @@ const CasesTimelinePanel: React.FC = () => {
 
     // Create a data point for each date with all counties
     const combinedData = sortedDates.map((date) => {
-      const dataPoint: any = { date };
+      const dataPoint: DataPoint = { date };
 
       casesTimeline.forEach((county) => {
         const caseForDate = county.cases.find((c) => c.date === date);

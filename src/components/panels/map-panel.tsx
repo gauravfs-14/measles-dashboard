@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useMemo } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
@@ -11,7 +12,7 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import { Card } from "@/components/ui/card";
 
-let DefaultIcon = L.icon({
+const DefaultIcon = L.icon({
   iconUrl: icon.src,
   shadowUrl: iconShadow.src,
   iconSize: [25, 41],
@@ -108,8 +109,10 @@ const MapPanel: React.FC<MapPanelProps> = ({
           });
           layer.bringToFront();
         },
-        mouseout: (e) => {
-          geoData && (layer as L.Path).setStyle(countyStyle(feature));
+        mouseout: () => {
+          if (geoData) {
+            (layer as L.Path).setStyle(countyStyle(feature));
+          }
         },
       });
 
