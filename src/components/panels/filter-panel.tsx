@@ -28,7 +28,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ className = "" }) => {
 
   // Create debounced update function with proper typing
   const debouncedUpdateFilter = useDebouncedCallback(
-    <K extends keyof typeof filters>(key: K, value: any) => {
+    <K extends keyof typeof filters>(key: K, value: (typeof filters)[K]) => {
       updateFilter(key, value);
     },
     300
