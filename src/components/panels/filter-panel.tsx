@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useMapData } from "@/hooks/useMapData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -13,6 +13,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { useDebouncedCallback } from "use-debounce";
 
 interface FilterPanelProps {
   className?: string;
@@ -20,10 +22,20 @@ interface FilterPanelProps {
 
 const FilterPanel: React.FC<FilterPanelProps> = ({ className = "" }) => {
   const { filters, updateFilter, resetFilters, mmrData } = useMapData();
+  const [minCasesInput, setMinCasesInput] = useState<string>(
+    filters.minCases?.toString() || ""
+  );
+
+  // Create debounced update function with proper typing
+  const debouncedUpdateFilter = useDebouncedCallback(
+    <K extends keyof typeof filters>(key: K, value: any) => {
+      updateFilter(key, value);
+    },
+    300
+  );
 
   // Get list of counties for dropdown
-  const countyOptions = React.useMemo(() => {
-    // Only use the data after the header row (first item)
+  const countyOptions = useMemo(() => {
     const data = mmrData.length > 0 ? mmrData : [];
     return data
       .filter((item) => item.county && item.county !== "State")
@@ -31,26 +43,59 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ className = "" }) => {
       .sort();
   }, [mmrData]);
 
+  // Filtered county options for display
+  const displayedCountyOptions = useMemo(() => {
+    return filters.selectedCounty ? [filters.selectedCounty] : countyOptions;
+  }, [countyOptions, filters.selectedCounty]);
+
   // Helper function to handle the county selection
   const handleCountyChange = (value: string) => {
     updateFilter("selectedCounty", value === "all" ? undefined : value);
   };
 
-  // Helper function to handle min cases change with proper type conversion
+  // Helper function to handle min cases change with debouncing
   const handleMinCasesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    const numValue = value === "" ? 0 : parseInt(value);
-    updateFilter("minCases", numValue);
+    setMinCasesInput(value);
+    const numValue = value === "" ? undefined : parseInt(value);
+    debouncedUpdateFilter("minCases" as keyof typeof filters, numValue);
   };
+
+  // Check if filters are active
+  const activeFilters = useMemo(() => {
+    return {
+      county: !!filters.selectedCounty,
+      vaccRate: !!filters.minVaccRate && filters.minVaccRate !== "0",
+      minCases: filters.minCases !== undefined && filters.minCases > 0,
+      showOnlyCases: !!filters.showOnlyCases,
+    };
+  }, [filters]);
+
+  // Update minCasesInput when filters are reset
+  useEffect(() => {
+    setMinCasesInput(filters.minCases?.toString() || "");
+  }, [filters.minCases]);
+
+  const hasActiveFilters = Object.values(activeFilters).some(Boolean);
 
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle className="text-lg font-semibold">Filter Map Data</CardTitle>
+        <div className="flex justify-between items-center">
+          <CardTitle className="text-lg font-semibold">
+            Filter Map Data
+          </CardTitle>
+          {hasActiveFilters && (
+            <Badge variant="secondary">Filters Active</Badge>
+          )}
+        </div>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="grid gap-2">
-          <Label htmlFor="county">County</Label>
+          <div className="flex justify-between">
+            <Label htmlFor="county">County</Label>
+            {activeFilters.county && <Badge variant="outline">Active</Badge>}
+          </div>
           <Select
             value={filters.selectedCounty || "all"}
             onValueChange={handleCountyChange}
@@ -60,7 +105,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ className = "" }) => {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Counties</SelectItem>
-              {countyOptions.map((county) => (
+              {displayedCountyOptions.map((county) => (
                 <SelectItem key={county} value={county}>
                   {county}
                 </SelectItem>
@@ -70,7 +115,10 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ className = "" }) => {
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="vaccRate">Minimum Vaccination Rate</Label>
+          <div className="flex justify-between">
+            <Label htmlFor="vaccRate">Minimum Vaccination Rate</Label>
+            {activeFilters.vaccRate && <Badge variant="outline">Active</Badge>}
+          </div>
           <Select
             value={filters.minVaccRate || "0"}
             onValueChange={(value) => updateFilter("minVaccRate", value)}
@@ -89,31 +137,44 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ className = "" }) => {
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="minCases">Minimum Cases</Label>
+          <div className="flex justify-between">
+            <Label htmlFor="minCases">Minimum Cases</Label>
+            {activeFilters.minCases && <Badge variant="outline">Active</Badge>}
+          </div>
           <Input
             id="minCases"
             type="number"
             min="0"
-            value={filters.minCases || 0}
+            value={minCasesInput}
             onChange={handleMinCasesChange}
             className="w-full"
           />
         </div>
 
-        <div className="flex items-center space-x-2">
-          <Switch
-            id="show-only-cases"
-            checked={filters.showOnlyCases || false}
-            onCheckedChange={(checked) =>
-              updateFilter("showOnlyCases", checked)
-            }
-          />
-          <Label htmlFor="show-only-cases" className="cursor-pointer">
-            Show only counties with cases
-          </Label>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Switch
+              id="show-only-cases"
+              checked={filters.showOnlyCases || false}
+              onCheckedChange={(checked) =>
+                updateFilter("showOnlyCases", checked)
+              }
+            />
+            <Label htmlFor="show-only-cases" className="cursor-pointer">
+              Show only counties with cases
+            </Label>
+          </div>
+          {activeFilters.showOnlyCases && (
+            <Badge variant="outline">Active</Badge>
+          )}
         </div>
 
-        <Button variant="outline" onClick={resetFilters} className="w-full">
+        <Button
+          variant="outline"
+          onClick={resetFilters}
+          className="w-full"
+          disabled={!hasActiveFilters}
+        >
           Reset Filters
         </Button>
       </CardContent>

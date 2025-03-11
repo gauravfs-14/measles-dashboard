@@ -20,9 +20,9 @@ const VaccinationStatusPanel: React.FC = () => {
   // Transform data for the bar chart
   const chartData = vaccinationStatus
     ? [
-        { name: "Not Vaccinated", value: vaccinationStatus.notVaccinated },
-        { name: "Unknown Status", value: vaccinationStatus.unknownStatus },
-        { name: "Vaccinated", value: vaccinationStatus.vaccinated },
+        { name: "Vaccinated", Cases: vaccinationStatus.vaccinated },
+        { name: "Unvaccinated", Cases: vaccinationStatus.notVaccinated },
+        { name: "Unknown", Cases: vaccinationStatus.unknownStatus },
       ]
     : [];
 
@@ -67,11 +67,11 @@ const VaccinationStatusPanel: React.FC = () => {
             <YAxis />
             <Tooltip formatter={(value) => [`${value} cases`, ""]} />
             <Legend />
-            <Bar dataKey="value" fill="#8884d8">
+            <Bar dataKey="Cases" fill="#8884d8">
               {chartData.map((entry, index) => (
                 <Bar
                   key={`bar-${index}`}
-                  dataKey="value"
+                  dataKey="Cases"
                   fill={COLORS[index % COLORS.length]}
                 />
               ))}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useExemptionsData } from "@/hooks/useExemptionsData";
 import { useFilterContext } from "@/context/filter-context";
@@ -25,13 +25,12 @@ import { Label } from "@/components/ui/label";
 const ExemptionRatesPanel: React.FC = () => {
   const { data, loading, error, years } = useExemptionsData();
   const { filters, updateFilter } = useFilterContext();
-  const [sortBy, setSortBy] = useState<"alphabetical" | "rate">("rate");
 
   // Selected year from filters
   const selectedYear =
     filters.year || (years?.length ? years[years.length - 1] : "2023-2024");
 
-  // Prepare data for the chart - take top 10 counties by exemption rate for the selected year
+  // Prepare data for the chart - take top 20 counties by exemption rate for the selected year
   const chartData = React.useMemo(() => {
     if (!data.length || !selectedYear) return [];
 
@@ -41,17 +40,14 @@ const ExemptionRatesPanel: React.FC = () => {
       rate: (county[selectedYear] as number) * 100, // Convert to percentage
     }));
 
-    // Sort by rate or alphabetically
-    const sortedData = [...mappedData];
-    if (sortBy === "rate") {
-      sortedData.sort((a, b) => (b.rate || 0) - (a.rate || 0));
-    } else {
-      sortedData.sort((a, b) => a.county.localeCompare(b.county));
-    }
+    // Sort by rate (highest first)
+    const sortedData = [...mappedData].sort(
+      (a, b) => (b.rate || 0) - (a.rate || 0)
+    );
 
-    // Take top 15 counties if sorting by rate, otherwise all counties
-    return sortBy === "rate" ? sortedData.slice(0, 15) : sortedData;
-  }, [data, selectedYear, sortBy]);
+    // Take top 20 counties
+    return sortedData.slice(0, 20);
+  }, [data, selectedYear]);
 
   const handleYearChange = (value: string) => {
     updateFilter("year", value);
@@ -103,26 +99,9 @@ const ExemptionRatesPanel: React.FC = () => {
               </SelectContent>
             </Select>
           </div>
-          <div className="flex-1 grid gap-1">
-            <Label htmlFor="sort">Sort By</Label>
-            <Select
-              value={sortBy}
-              onValueChange={(value: "alphabetical" | "rate") =>
-                setSortBy(value)
-              }
-            >
-              <SelectTrigger id="sort">
-                <SelectValue placeholder="Sort By" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="rate">Highest Rate</SelectItem>
-                <SelectItem value="alphabetical">Alphabetical</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
         </div>
       </CardHeader>
-      <CardContent className="h-80">
+      <CardContent className="h-200">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
@@ -131,7 +110,13 @@ const ExemptionRatesPanel: React.FC = () => {
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number" unit="%" />
-            <YAxis dataKey="county" type="category" width={60} />
+            <YAxis
+              dataKey="county"
+              type="category"
+              width={60}
+              // label={"Counties"}
+              tick={{ fontSize: 12 }}
+            />
             <Tooltip
               formatter={(value) => [
                 `${Number(value).toFixed(2)}%`,

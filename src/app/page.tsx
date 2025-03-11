@@ -6,6 +6,7 @@ import FilterPanel from "@/components/panels/filter-panel";
 import VaccinationStatusPanel from "@/components/panels/vaccination-status-panel";
 import { FilterProvider } from "@/context/filter-context";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const MapPanel = dynamic(() => import("@/components/panels/map-panel"), {
   loading: () => <p>Loading map...</p>,
@@ -20,6 +21,18 @@ export default function Home() {
       </header>
 
       <main className="max-w-5xl mx-auto">
+        <div>
+          <p className="flex gap-2 justify-center items-center">
+            All data are sourced from{" "}
+            <Link
+              href={"https://www.dshs.texas.gov/news-alerts"}
+              className="underline"
+            >
+              DSHS TX.
+            </Link>{" "}
+            <div className="font-bold">Last updated 3/7/2025.</div>
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
           <div className="md:col-span-1 h-full">
             <FilterPanel className="h-full" />
