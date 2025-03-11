@@ -27,6 +27,7 @@ export default function Home() {
             <Link
               href={"https://www.dshs.texas.gov/news-alerts"}
               className="underline"
+              target="_blank"
             >
               DSHS TX.
             </Link>{" "}
@@ -52,6 +53,26 @@ export default function Home() {
           <div className="col-span-full">
             <ExemptionRatesPanel />
           </div>
+        </div>
+        <div className="p-4">
+          <p className="flex gap-2 justify-center items-center">
+            Developed By:{" "}
+            <Link
+              href={"https://github.com/gauravfs-14"}
+              className="underline"
+              target="_blank"
+            >
+              Gaurab Chhetri
+            </Link>
+            | Supported by{" "}
+            <Link
+              href={"https://ait-lab.vercel.app/"}
+              className="underline"
+              target="_blank"
+            >
+              AIT Lab.
+            </Link>
+          </p>
         </div>
       </main>
     </FilterProvider>
