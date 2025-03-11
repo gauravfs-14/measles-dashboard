@@ -22,16 +22,18 @@ export default function Home() {
 
       <main className="max-w-5xl mx-auto">
         <div>
-          <p className="flex gap-2 justify-center items-center">
+          <p className="flex gap-2 justify-center items-center flex-wrap">
             All data are sourced from{" "}
-            <Link
-              href={"https://www.dshs.texas.gov/news-alerts"}
-              className="underline"
-              target="_blank"
-            >
-              DSHS TX.
-            </Link>{" "}
-            <div className="font-bold">Last updated 3/7/2025.</div>
+            <span>
+              <Link
+                href={"https://www.dshs.texas.gov/news-alerts"}
+                className="underline"
+                target="_blank"
+              >
+                DSHS TX.
+              </Link>{" "}
+            </span>
+            <span className="font-bold">Last updated 3/7/2025.</span>
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
@@ -55,23 +57,27 @@ export default function Home() {
           </div>
         </div>
         <div className="p-4">
-          <p className="flex gap-2 justify-center items-center">
+          <p className="flex gap-2 justify-center items-center flex-wrap">
             Developed By:{" "}
-            <Link
-              href={"https://github.com/gauravfs-14"}
-              className="underline"
-              target="_blank"
-            >
-              Gaurab Chhetri
-            </Link>
+            <span>
+              <Link
+                href={"https://github.com/gauravfs-14"}
+                className="underline"
+                target="_blank"
+              >
+                Gaurab Chhetri
+              </Link>
+            </span>
             | Supported by{" "}
-            <Link
-              href={"https://ait-lab.vercel.app/"}
-              className="underline"
-              target="_blank"
-            >
-              AIT Lab.
-            </Link>
+            <span>
+              <Link
+                href={"https://ait-lab.vercel.app/"}
+                className="underline"
+                target="_blank"
+              >
+                AIT Lab.
+              </Link>
+            </span>
           </p>
         </div>
       </main>
