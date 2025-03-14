@@ -39,3 +39,7 @@ This dashboard aggregates data from multiple sources including:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+Developed by: [Gaurab Chhetri](https://github.com/gauravfs-14), Supported by [AIT Lab](https://ait-lab.vercel.app).
