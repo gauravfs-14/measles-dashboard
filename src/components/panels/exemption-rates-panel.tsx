@@ -124,7 +124,7 @@ const ExemptionRatesPanel: React.FC = () => {
               ]}
             />
             <Legend />
-            <Bar dataKey="rate" name="Exemption Rate (%)" fill="#2fa05f" />
+            <Bar dataKey="rate" name="Exemption Rate (%)" fill="#74A089" />
           </BarChart>
         </ResponsiveContainer>
       </CardContent>

@@ -67,7 +67,7 @@ const VaccinationStatusPanel: React.FC = () => {
             <YAxis />
             <Tooltip formatter={(value) => [`${value} cases`, ""]} />
             <Legend />
-            <Bar dataKey="Cases" fill="#8884d8">
+            <Bar dataKey="Cases" fill="#F8AFA8">
               {chartData.map((entry, index) => (
                 <Bar
                   key={`bar-${index}`}

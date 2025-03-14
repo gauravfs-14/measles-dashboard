@@ -58,7 +58,7 @@ const AgeDistributionPanel: React.FC = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="cases" fill="#fc9767" name="Cases" />
+            <Bar dataKey="cases" fill="#DC863B" name="Cases" />
           </BarChart>
         </ResponsiveContainer>
       </CardContent>

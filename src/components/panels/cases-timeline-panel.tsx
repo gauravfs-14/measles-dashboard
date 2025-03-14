@@ -14,16 +14,16 @@ import {
 } from "recharts";
 
 const COLORS = [
-  "#8884d8",
-  "#82ca9d",
-  "#ffc658",
-  "#ff7300",
-  "#0088FE",
-  "#00C49F",
-  "#FFBB28",
-  "#FF8042",
-  "#a4de6c",
-  "#d0ed57",
+  "#899DA4",
+  "#74A089",
+  "#F8AFA8",
+  "#C93312",
+  "#F5CDB4",
+  "#D8B70A",
+  "#9A8822",
+  "#DC863B",
+  "#972D15",
+  "#02401B",
 ];
 
 const CasesTimelinePanel: React.FC = () => {
