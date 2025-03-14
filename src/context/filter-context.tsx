@@ -1,34 +1,63 @@
 "use client";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-type FilterState = {
-  year: number | null;
-  country: string | null;
-  region: string | null;
-  ageGroup: string | null;
-  startDate: Date | null;
-  endDate: Date | null;
-};
+export interface FilterState {
+  selectedCounty?: string;
+  minVaccRate?: string;
+  minCases?: number;
+  showOnlyCases?: boolean;
+  dateRange?: {
+    start: string;
+    end: string;
+  };
+  ageGroup?: string;
+  year?: string;
+  vaccinationStatus?: string;
+}
 
-type FilterContextType = {
+interface FilterContextType {
   filters: FilterState;
-  setFilters: React.Dispatch<React.SetStateAction<FilterState>>;
-};
+  updateFilter: <K extends keyof FilterState>(
+    key: K,
+    value: FilterState[K]
+  ) => void;
+  resetFilters: () => void;
+}
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined);
 
-export const FilterProvider = ({ children }: { children: ReactNode }) => {
-  const [filters, setFilters] = useState<FilterState>({
-    year: null,
-    country: null,
-    region: null,
-    ageGroup: null,
-    startDate: null,
-    endDate: null,
-  });
+const initialFilters: FilterState = {
+  selectedCounty: undefined,
+  minVaccRate: "0",
+  minCases: 0,
+  showOnlyCases: false,
+  dateRange: undefined,
+  ageGroup: undefined,
+  year: "2023-2024",
+  vaccinationStatus: undefined,
+};
+
+export const FilterProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  const [filters, setFilters] = useState<FilterState>(initialFilters);
+
+  const updateFilter = <K extends keyof FilterState>(
+    key: K,
+    value: FilterState[K]
+  ) => {
+    setFilters((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
+
+  const resetFilters = () => {
+    setFilters(initialFilters);
+  };
 
   return (
-    <FilterContext.Provider value={{ filters, setFilters }}>
+    <FilterContext.Provider value={{ filters, updateFilter, resetFilters }}>
       {children}
     </FilterContext.Provider>
   );
@@ -36,7 +65,7 @@ export const FilterProvider = ({ children }: { children: ReactNode }) => {
 
 export const useFilterContext = () => {
   const context = useContext(FilterContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useFilterContext must be used within a FilterProvider");
   }
   return context;
