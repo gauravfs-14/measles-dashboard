@@ -5,7 +5,7 @@
     },
     {
         "county": "Dawson, TX",
-        "cases": 9
+        "cases": 10
     },
     {
         "county": "Ector, TX",
@@ -13,7 +13,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 137
+        "cases": 156
     },
     {
         "county": "Harris, TX",
@@ -37,7 +37,7 @@
     },
     {
         "county": "Terry, TX",
-        "cases": 29
+        "cases": 32
     },
     {
         "county": "Travis, TX",
@@ -45,6 +45,6 @@
     },
     {
         "county": "Yoakum, TX",
-        "cases": 8
+        "cases": 10
     }
 ]

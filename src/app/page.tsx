@@ -16,7 +16,7 @@ const MapPanel = dynamic(() => import("@/components/panels/map-panel"), {
 export default function Home() {
   return (
     <FilterProvider>
-      <header className="w-full flex justify-center items-center p-4 mb-6 bg-green-800 text-white">
+      <header className="w-full flex justify-center items-center p-4 mb-6 bg-[#74A089] text-white">
         <h1 className="text-2xl font-bold">
           Texas Measles Outbreak (2025) Dashboard
         </h1>
@@ -35,7 +35,7 @@ export default function Home() {
                 DSHS TX.
               </Link>{" "}
             </span>
-            <span className="font-bold">Last updated 3/7/2025.</span>
+            <span className="font-bold">Last updated 3/13/2025.</span>
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
