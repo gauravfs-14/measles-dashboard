@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-img.png",
-        width: 1200,
-        height: 630,
+        width: 1695,
+        height: 988,
         alt: "Texas Measles Dashboard Preview",
       },
     ],
