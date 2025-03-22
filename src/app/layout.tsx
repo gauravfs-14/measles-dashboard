@@ -14,9 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Texas Measles Dashboard (2025)",
+  title: "Texas Measles Outbreak (2025) Dashboard",
   description:
-    "Interactive dashboard showing measles cases and vaccination rates across Texas counties in 2025",
+    "A comprehensive dashboard application for visualizing and analyzing measles outbreak data. This project provides public health officials, researchers, and the general public with up-to-date information on measles cases, vaccination rates, and outbreak predictions.",
+  openGraph: {
+    title: "Texas Measles Outbreak (2025) Dashboard",
+    description:
+      "A comprehensive dashboard application for visualizing and analyzing measles outbreak data. This project provides public health officials, researchers, and the general public with up-to-date information on measles cases, vaccination rates, and outbreak predictions.",
+    images: [
+      {
+        url: "/og-img.png",
+        width: 1200,
+        height: 630,
+        alt: "Texas Measles Dashboard Preview",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
