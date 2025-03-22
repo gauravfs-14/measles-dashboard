@@ -1,5 +1,5 @@
 {
-    "notVaccinated": 80,
-    "unknownStatus": 138,
-    "vaccinated": 5
+    "notVaccinatedUnknown": 307,
+    "vaccinated1Dose": 0,
+    "vaccinated2Dose": 2
 }

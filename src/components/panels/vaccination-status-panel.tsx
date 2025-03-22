@@ -20,9 +20,18 @@ const VaccinationStatusPanel: React.FC = () => {
   // Transform data for the bar chart
   const chartData = vaccinationStatus
     ? [
-        { name: "Vaccinated", Cases: vaccinationStatus.vaccinated },
-        { name: "Unvaccinated", Cases: vaccinationStatus.notVaccinated },
-        { name: "Unknown", Cases: vaccinationStatus.unknownStatus },
+        {
+          name: "Unvaccinated/Unknown",
+          Cases: vaccinationStatus.notVaccinatedUnknown,
+        },
+        {
+          name: "Vaccinated 1+ Dose",
+          Cases: vaccinationStatus.vaccinated1Dose,
+        },
+        {
+          name: "Vaccinated 2+ Dose",
+          Cases: vaccinationStatus.vaccinated2Dose,
+        },
       ]
     : [];
 

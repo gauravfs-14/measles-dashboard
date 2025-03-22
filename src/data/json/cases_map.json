@@ -1,11 +1,15 @@
 [
     {
+        "county": "Cochran, TX",
+        "cases": 7
+    },
+    {
         "county": "Dallam, TX",
-        "cases": 5
+        "cases": 6
     },
     {
         "county": "Dawson, TX",
-        "cases": 10
+        "cases": 13
     },
     {
         "county": "Ector, TX",
@@ -13,15 +17,31 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 156
+        "cases": 211
+    },
+    {
+        "county": "Garza, TX",
+        "cases": 1
+    },
+    {
+        "county": "Hale, TX",
+        "cases": 1
     },
     {
         "county": "Harris, TX",
-        "cases": 2
+        "cases": 3
+    },
+    {
+        "county": "Hockley, TX",
+        "cases": 1
+    },
+    {
+        "county": "Lamar, TX",
+        "cases": 5
     },
     {
         "county": "Lubbock, TX",
-        "cases": 3
+        "cases": 8
     },
     {
         "county": "Lynn, TX",
@@ -32,12 +52,16 @@
         "cases": 3
     },
     {
+        "county": "Midland, TX",
+        "cases": 1
+    },
+    {
         "county": "Rockwall, TX",
         "cases": 1
     },
     {
         "county": "Terry, TX",
-        "cases": 32
+        "cases": 37
     },
     {
         "county": "Travis, TX",
@@ -45,6 +69,6 @@
     },
     {
         "county": "Yoakum, TX",
-        "cases": 10
+        "cases": 12
     }
 ]

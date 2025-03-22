@@ -5,9 +5,9 @@ import agesData from "@/data/json/cases_ages.json";
 import timelineData from "@/data/json/cases_over_time.json";
 
 interface VaccinationStatusData {
-  vaccinated: number;
-  notVaccinated: number;
-  unknownStatus: number;
+  notVaccinatedUnknown: number;
+  vaccinated1Dose: number;
+  vaccinated2Dose: number;
 }
 
 interface AgeData {
