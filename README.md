@@ -29,12 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Data Sources
 
-This dashboard aggregates data from multiple sources including:
-
-- World Health Organization (WHO)
-- Centers for Disease Control and Prevention (CDC)
-- Local health departments
-- Public health databases
+This dashboard uses data from DSHS TX. https://www.dshs.texas.gov/news-alerts
 
 ## Contributing
 
