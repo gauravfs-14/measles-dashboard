@@ -1,15 +1,15 @@
 [
     {
         "age": "0-4",
-        "cases": 102
+        "cases": 105
     },
     {
         "age": "5-17",
-        "cases": 130
+        "cases": 140
     },
     {
         "age": "18+",
-        "cases": 58
+        "cases": 63
     },
     {
         "age": "Pending",

@@ -17,7 +17,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 211
+        "cases": 226
     },
     {
         "county": "Garza, TX",
@@ -40,8 +40,12 @@
         "cases": 5
     },
     {
+        "county": "Lamb, TX",
+        "cases": 1
+    },
+    {
         "county": "Lubbock, TX",
-        "cases": 8
+        "cases": 10
     },
     {
         "county": "Lynn, TX",
@@ -69,6 +73,6 @@
     },
     {
         "county": "Yoakum, TX",
-        "cases": 12
+        "cases": 13
     }
 ]
