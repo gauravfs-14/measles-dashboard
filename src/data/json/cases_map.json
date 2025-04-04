@@ -1,31 +1,47 @@
 [
     {
+        "county": "Andrews, TX",
+        "cases": 1
+    },
+    {
+        "county": "Brown, TX",
+        "cases": 1
+    },
+    {
         "county": "Cochran, TX",
-        "cases": 7
+        "cases": 9
     },
     {
         "county": "Dallam, TX",
-        "cases": 6
+        "cases": 7
     },
     {
         "county": "Dawson, TX",
-        "cases": 13
+        "cases": 20
     },
     {
         "county": "Ector, TX",
-        "cases": 2
+        "cases": 8
+    },
+    {
+        "county": "Erath, TX",
+        "cases": 1
+    },
+    {
+        "county": "Fort Blend, TX",
+        "cases": 1
     },
     {
         "county": "Gaines, TX",
-        "cases": 226
+        "cases": 315
     },
     {
         "county": "Garza, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Hale, TX",
-        "cases": 1
+        "cases": 3
     },
     {
         "county": "Harris, TX",
@@ -33,11 +49,11 @@
     },
     {
         "county": "Hockley, TX",
-        "cases": 1
+        "cases": 3
     },
     {
         "county": "Lamar, TX",
-        "cases": 5
+        "cases": 11
     },
     {
         "county": "Lamb, TX",
@@ -45,7 +61,7 @@
     },
     {
         "county": "Lubbock, TX",
-        "cases": 10
+        "cases": 33
     },
     {
         "county": "Lynn, TX",
@@ -65,7 +81,7 @@
     },
     {
         "county": "Terry, TX",
-        "cases": 37
+        "cases": 43
     },
     {
         "county": "Travis, TX",
@@ -73,6 +89,6 @@
     },
     {
         "county": "Yoakum, TX",
-        "cases": 13
+        "cases": 17
     }
 ]
