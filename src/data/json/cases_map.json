@@ -4,12 +4,16 @@
         "cases": 1
     },
     {
+        "county": "Borden, TX",
+        "cases": 1
+    },
+    {
         "county": "Brown, TX",
         "cases": 1
     },
     {
         "county": "Cochran, TX",
-        "cases": 9
+        "cases": 11
     },
     {
         "county": "Dallam, TX",
@@ -17,11 +21,15 @@
     },
     {
         "county": "Dawson, TX",
-        "cases": 20
+        "cases": 21
     },
     {
         "county": "Ector, TX",
         "cases": 8
+    },
+    {
+        "county": "El Paso, TX",
+        "cases": 3
     },
     {
         "county": "Erath, TX",
@@ -33,7 +41,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 315
+        "cases": 355
     },
     {
         "county": "Garza, TX",
@@ -41,11 +49,11 @@
     },
     {
         "county": "Hale, TX",
-        "cases": 3
+        "cases": 5
     },
     {
         "county": "Harris, TX",
-        "cases": 3
+        "cases": 4
     },
     {
         "county": "Hockley, TX",
@@ -61,7 +69,7 @@
     },
     {
         "county": "Lubbock, TX",
-        "cases": 33
+        "cases": 38
     },
     {
         "county": "Lynn, TX",
@@ -76,12 +84,16 @@
         "cases": 1
     },
     {
+        "county": "Randall, TX",
+        "cases": 1
+    },
+    {
         "county": "Rockwall, TX",
         "cases": 1
     },
     {
         "county": "Terry, TX",
-        "cases": 43
+        "cases": 47
     },
     {
         "county": "Travis, TX",
@@ -89,6 +101,6 @@
     },
     {
         "county": "Yoakum, TX",
-        "cases": 17
+        "cases": 18
     }
 ]
