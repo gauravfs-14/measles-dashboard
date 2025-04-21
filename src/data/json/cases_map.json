@@ -1,10 +1,14 @@
 [
     {
         "county": "Andrews, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Borden, TX",
+        "cases": 1
+    },
+    {
+        "county": "Brazoria, TX",
         "cases": 1
     },
     {
@@ -13,7 +17,7 @@
     },
     {
         "county": "Cochran, TX",
-        "cases": 11
+        "cases": 12
     },
     {
         "county": "Dallam, TX",
@@ -21,15 +25,15 @@
     },
     {
         "county": "Dawson, TX",
-        "cases": 21
+        "cases": 24
     },
     {
         "county": "Ector, TX",
-        "cases": 8
+        "cases": 9
     },
     {
         "county": "El Paso, TX",
-        "cases": 3
+        "cases": 18
     },
     {
         "county": "Erath, TX",
@@ -37,11 +41,11 @@
     },
     {
         "county": "Fort Blend, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Gaines, TX",
-        "cases": 355
+        "cases": 371
     },
     {
         "county": "Garza, TX",
@@ -57,7 +61,7 @@
     },
     {
         "county": "Hockley, TX",
-        "cases": 3
+        "cases": 5
     },
     {
         "county": "Lamar, TX",
@@ -69,7 +73,7 @@
     },
     {
         "county": "Lubbock, TX",
-        "cases": 38
+        "cases": 42
     },
     {
         "county": "Lynn, TX",
@@ -81,6 +85,14 @@
     },
     {
         "county": "Midland, TX",
+        "cases": 2
+    },
+    {
+        "county": "Parmer, TX",
+        "cases": 4
+    },
+    {
+        "county": "Potter, TX",
         "cases": 1
     },
     {
@@ -88,19 +100,27 @@
         "cases": 1
     },
     {
-        "county": "Rockwall, TX",
+        "county": "Reeves, TX",
         "cases": 1
     },
     {
+        "county": "Rockwall, TX",
+        "cases": 2
+    },
+    {
         "county": "Terry, TX",
-        "cases": 47
+        "cases": 52
     },
     {
         "county": "Travis, TX",
         "cases": 1
     },
     {
+        "county": "Upshur, TX",
+        "cases": 15
+    },
+    {
         "county": "Yoakum, TX",
-        "cases": 18
+        "cases": 19
     }
 ]
