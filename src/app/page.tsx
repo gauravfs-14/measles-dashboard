@@ -35,7 +35,7 @@ export default function Home() {
                 DSHS TX.
               </Link>{" "}
             </span>
-            <span className="font-bold">Last updated 04/25/2025.</span>
+            <span className="font-bold">Last updated 04/29/2025.</span>
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
