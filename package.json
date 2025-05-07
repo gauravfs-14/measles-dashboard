@@ -2,6 +2,29 @@
   "name": "measles-dashboard",
   "version": "0.1.0",
   "private": true,
+  "description": "An interactive dashboard visualizing measles data across West Texas using Next.js, Leaflet, and Recharts.",
+  "author": "Gaurab Chhetri",
+  "license": "MIT",
+  "keywords": [
+    "measles",
+    "dashboard",
+    "nextjs",
+    "typescript",
+    "public-health",
+    "data-visualization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gauravfs-14/measles-dashboard.git"
+  },
+  "homepage": "https://measles-dashboard.vercel.app",
+  "bugs": {
+    "url": "https://github.com/gauravfs-14/measles-dashboard/issues"
+  },
+  "engines": {
+    "node": ">=18",
+    "yarn": ">=1.22"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
