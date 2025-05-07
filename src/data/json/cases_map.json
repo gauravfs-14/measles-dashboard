@@ -28,27 +28,39 @@
         "cases": 14
     },
     {
+        "county": "Collin, TX",
+        "cases": 1
+    },
+    {
         "county": "Dallam, TX",
         "cases": 7
     },
     {
         "county": "Dawson, TX",
-        "cases": 25
+        "cases": 26
+    },
+    {
+        "county": "Denton, TX",
+        "cases": 1
+    },
+    {
+        "county": "Eastland, TX",
+        "cases": 2
     },
     {
         "county": "Ector, TX",
-        "cases": 10
+        "cases": 11
     },
     {
         "county": "El Paso, TX",
-        "cases": 32
+        "cases": 38
     },
     {
         "county": "Erath, TX",
         "cases": 1
     },
     {
-        "county": "Fort Blend, TX",
+        "county": "Fort Bend, TX",
         "cases": 1
     },
     {
@@ -64,12 +76,16 @@
         "cases": 5
     },
     {
+        "county": "Hardeman, TX",
+        "cases": 1
+    },
+    {
         "county": "Harris, TX",
         "cases": 4
     },
     {
         "county": "Hockley, TX",
-        "cases": 5
+        "cases": 6
     },
     {
         "county": "Lamar, TX",
@@ -81,7 +97,7 @@
     },
     {
         "county": "Lubbock, TX",
-        "cases": 48
+        "cases": 50
     },
     {
         "county": "Lynn, TX",
@@ -101,7 +117,7 @@
     },
     {
         "county": "Potter, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Randall, TX",
@@ -116,16 +132,20 @@
         "cases": 2
     },
     {
+        "county": "Shackelford, TX",
+        "cases": 1
+    },
+    {
         "county": "Terry, TX",
         "cases": 59
     },
     {
         "county": "Travis, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Upshur, TX",
-        "cases": 18
+        "cases": 5
     },
     {
         "county": "Yoakum, TX",
