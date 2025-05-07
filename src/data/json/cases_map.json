@@ -53,7 +53,7 @@
     },
     {
         "county": "El Paso, TX",
-        "cases": 38
+        "cases": 44
     },
     {
         "county": "Erath, TX",
@@ -65,7 +65,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 396
+        "cases": 403
     },
     {
         "county": "Garza, TX",
@@ -73,7 +73,7 @@
     },
     {
         "county": "Hale, TX",
-        "cases": 5
+        "cases": 6
     },
     {
         "county": "Hardeman, TX",
@@ -89,7 +89,7 @@
     },
     {
         "county": "Lamar, TX",
-        "cases": 17
+        "cases": 18
     },
     {
         "county": "Lamb, TX",
@@ -97,7 +97,7 @@
     },
     {
         "county": "Lubbock, TX",
-        "cases": 50
+        "cases": 51
     },
     {
         "county": "Lynn, TX",
@@ -113,7 +113,7 @@
     },
     {
         "county": "Parmer, TX",
-        "cases": 4
+        "cases": 5
     },
     {
         "county": "Potter, TX",
@@ -136,8 +136,12 @@
         "cases": 1
     },
     {
+        "county": "Tarrant, TX",
+        "cases": 2
+    },
+    {
         "county": "Terry, TX",
-        "cases": 59
+        "cases": 60
     },
     {
         "county": "Travis, TX",
@@ -149,6 +153,6 @@
     },
     {
         "county": "Yoakum, TX",
-        "cases": 19
+        "cases": 20
     }
 ]
