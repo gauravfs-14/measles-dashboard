@@ -24,6 +24,10 @@
         "cases": 1
     },
     {
+        "county": "Carson, TX",
+        "cases": 1
+    },
+    {
         "county": "Cochran, TX",
         "cases": 14
     },
@@ -53,7 +57,7 @@
     },
     {
         "county": "El Paso, TX",
-        "cases": 50
+        "cases": 52
     },
     {
         "county": "Erath, TX",
@@ -65,7 +69,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 403
+        "cases": 405
     },
     {
         "county": "Garza, TX",
@@ -97,7 +101,7 @@
     },
     {
         "county": "Lubbock, TX",
-        "cases": 51
+        "cases": 52
     },
     {
         "county": "Lynn, TX",
@@ -129,7 +133,7 @@
     },
     {
         "county": "Rockwall, TX",
-        "cases": 2
+        "cases": 1
     },
     {
         "county": "Shackelford, TX",
