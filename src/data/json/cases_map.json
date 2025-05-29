@@ -37,7 +37,7 @@
     },
     {
         "county": "Collin, TX",
-        "cases": 2
+        "cases": 1
     },
     {
         "county": "Dallam, TX",
@@ -61,7 +61,7 @@
     },
     {
         "county": "El Paso, TX",
-        "cases": 56
+        "cases": 57
     },
     {
         "county": "Erath, TX",
@@ -137,11 +137,11 @@
     },
     {
         "county": "Potter, TX",
-        "cases": 2
+        "cases": 1
     },
     {
         "county": "Randall, TX",
-        "cases": 2
+        "cases": 1
     },
     {
         "county": "Reeves, TX",
@@ -161,7 +161,7 @@
     },
     {
         "county": "Tarrant, TX",
-        "cases": 2
+        "cases": 4
     },
     {
         "county": "Terry, TX",
