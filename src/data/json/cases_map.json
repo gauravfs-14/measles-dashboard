@@ -37,7 +37,7 @@
     },
     {
         "county": "Collin, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Dallam, TX",
@@ -73,7 +73,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 408
+        "cases": 409
     },
     {
         "county": "Garza, TX",
@@ -93,7 +93,7 @@
     },
     {
         "county": "Harrison, TX",
-        "cases": 1
+        "cases": 3
     },
     {
         "county": "Hays, TX",
@@ -125,7 +125,7 @@
     },
     {
         "county": "McLennan, TX",
-        "cases": 1
+        "cases": 8
     },
     {
         "county": "Midland, TX",
@@ -141,7 +141,7 @@
     },
     {
         "county": "Randall, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Reeves, TX",
@@ -174,6 +174,10 @@
     {
         "county": "Upshur, TX",
         "cases": 5
+    },
+    {
+        "county": "Williamson, TX",
+        "cases": 6
     },
     {
         "county": "Yoakum, TX",
