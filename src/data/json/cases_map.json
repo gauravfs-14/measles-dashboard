@@ -37,7 +37,7 @@
     },
     {
         "county": "Collin, TX",
-        "cases": 2
+        "cases": 3
     },
     {
         "county": "Dallam, TX",
@@ -45,7 +45,7 @@
     },
     {
         "county": "Dawson, TX",
-        "cases": 26
+        "cases": 27
     },
     {
         "county": "Denton, TX",
@@ -73,7 +73,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 409
+        "cases": 411
     },
     {
         "county": "Garza, TX",
@@ -89,11 +89,11 @@
     },
     {
         "county": "Harris, TX",
-        "cases": 4
+        "cases": 3
     },
     {
         "county": "Harrison, TX",
-        "cases": 3
+        "cases": 1
     },
     {
         "county": "Hays, TX",
@@ -105,7 +105,7 @@
     },
     {
         "county": "Lamar, TX",
-        "cases": 20
+        "cases": 21
     },
     {
         "county": "Lamb, TX",
