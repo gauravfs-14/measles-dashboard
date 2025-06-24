@@ -12,6 +12,10 @@
         "cases": 2
     },
     {
+        "county": "Bell, TX",
+        "cases": 1
+    },
+    {
         "county": "Borden, TX",
         "cases": 1
     },
@@ -44,8 +48,12 @@
         "cases": 7
     },
     {
+        "county": "Dallas, TX",
+        "cases": 1
+    },
+    {
         "county": "Dawson, TX",
-        "cases": 27
+        "cases": 26
     },
     {
         "county": "Denton, TX",
@@ -57,7 +65,7 @@
     },
     {
         "county": "Ector, TX",
-        "cases": 11
+        "cases": 12
     },
     {
         "county": "El Paso, TX",
@@ -68,12 +76,16 @@
         "cases": 1
     },
     {
+        "county": "Fannin, TX",
+        "cases": 1
+    },
+    {
         "county": "Fort Bend, TX",
         "cases": 1
     },
     {
         "county": "Gaines, TX",
-        "cases": 411
+        "cases": 413
     },
     {
         "county": "Garza, TX",
@@ -105,7 +117,7 @@
     },
     {
         "county": "Lamar, TX",
-        "cases": 21
+        "cases": 23
     },
     {
         "county": "Lamb, TX",
@@ -125,7 +137,7 @@
     },
     {
         "county": "McLennan, TX",
-        "cases": 8
+        "cases": 9
     },
     {
         "county": "Midland, TX",
@@ -145,7 +157,7 @@
     },
     {
         "county": "Reeves, TX",
-        "cases": 1
+        "cases": 2
     },
     {
         "county": "Rockwall, TX",
