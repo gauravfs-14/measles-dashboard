@@ -16,6 +16,10 @@
         "cases": 1
     },
     {
+        "county": "Bexar, TX",
+        "cases": 1
+    },
+    {
         "county": "Borden, TX",
         "cases": 1
     },
@@ -69,7 +73,7 @@
     },
     {
         "county": "El Paso, TX",
-        "cases": 58
+        "cases": 59
     },
     {
         "county": "Erath, TX",
@@ -85,7 +89,7 @@
     },
     {
         "county": "Gaines, TX",
-        "cases": 413
+        "cases": 414
     },
     {
         "county": "Garza, TX",
