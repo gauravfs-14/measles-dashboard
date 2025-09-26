@@ -22,6 +22,10 @@
   <a href="https://img.shields.io/github/last-commit/gauravfs-14/measles-dashboard" target="_blank">
     <img src="https://img.shields.io/github/last-commit/gauravfs-14/measles-dashboard" alt="Last Commit Badge">
   </a>
+  <a href="https://doi.org/10.5281/zenodo.17210857">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17210857.svg" alt="DOI">
+  </a>
+
 </div>
 
 ---
@@ -29,6 +33,27 @@
 A comprehensive dashboard application for visualizing and analyzing measles outbreak data. This project provides public health officials, researchers, and the general public with up-to-date information on measles cases, vaccination rates, and outbreak trends.
 
 The live dashboard can be accessed here: [https://measles-dashboard.vercel.app/](https://measles-dashboard.vercel.app/)
+
+If you use our project, please cite the repository.
+```bibtex
+@software{gaurab_chhetri_2025_17210857,
+  author       = {Gaurab Chhetri},
+  title        = {gauravfs-14/measles-dashboard: v1.0.0},
+  month        = sep,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.17210857},
+  url          = {https://doi.org/10.5281/zenodo.17210857},
+  swhid        = {swh:1:dir:f8cdd92969a9df100a9274707678054b89e7e8ec
+                   ;origin=https://doi.org/10.5281/zenodo.17210856;vi
+                   sit=swh:1:snp:cf015c14b04e14f6ce96d2126719dd15a96b
+                   bfe9;anchor=swh:1:rel:9a83de9f0191038d2215651fb5f2
+                   66bfc209dde3;path=gauravfs-14-measles-
+                   dashboard-69ef6cf
+                  },
+}
+```
 
 ## Table of Contents
 
